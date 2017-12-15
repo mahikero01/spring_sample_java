@@ -11,16 +11,16 @@ import org.springframework.stereotype.Service;
 @ComponentScan({"org.mahikero01"})
 public class AppConfig {
 	
-	@Bean(name = "customerService")
-	public CustomerService getCustomerService() {
+//	@Bean(name = "customerService")
+	//public CustomerService getCustomerService() {
 		//CustomerServiceImpl service = new CustomerServiceImpl(getCustomerRepository());
-		CustomerServiceImpl service = new CustomerServiceImpl();
-		service.setCustomerRepository(getCustomerRepository());
-		return service;
-	}
+	//	CustomerServiceImpl service = new CustomerServiceImpl();
+		//service.setCustomerRepository(getCustomerRepository());
+	//	return service;
+	//}
 	    
-	@Bean(name = "customerRepository")
-	public CustomerRepository getCustomerRepository() {
-		return new HibernateCustomerRepositoryImpl();
-	}
+	//@Bean(name = "customerRepository")
+	//public CustomerRepository getCustomerRepository() {
+	//	return new HibernateCustomerRepositoryImpl();
+	//}
 }

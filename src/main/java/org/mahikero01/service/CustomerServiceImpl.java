@@ -4,9 +4,13 @@ import java.util.List;
 
 import org.mahikero01.model.Customer;
 import org.mahikero01.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
+	
 	private CustomerRepository customerRepository;
 	
 	public CustomerServiceImpl() {
@@ -18,6 +22,7 @@ public class CustomerServiceImpl implements CustomerService {
 		this.customerRepository = customerRepository;
 	}
 	
+	@Autowired
 	public void setCustomerRepository(CustomerRepository customerRepository) {
 		System.out.println("We are using setter injection");
 		this.customerRepository = customerRepository;
