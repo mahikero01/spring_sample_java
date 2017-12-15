@@ -5,9 +5,11 @@ import java.util.List;
 import org.mahikero01.model.Customer;
 import org.mahikero01.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 @Service("customerService")
+@Scope("singleton")
 public class CustomerServiceImpl implements CustomerService {
 
 	
