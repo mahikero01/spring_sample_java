@@ -4,12 +4,15 @@ import java.util.List;
 
 import org.mahikero01.model.Customer;
 import org.mahikero01.repository.CustomerRepository;
-import org.mahikero01.repository.HibernateCustomerRepositoryImpl;
 
 public class CustomerServiceImpl implements CustomerService {
 
-	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+	private CustomerRepository customerRepository;
 	
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		this.customerRepository = customerRepository;
+	}
+
 	/* (non-Javadoc)
 	 * @see org.mahikero01.service.CustomerService#findAll()
 	 */
